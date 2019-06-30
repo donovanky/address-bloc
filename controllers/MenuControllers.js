@@ -10,6 +10,7 @@ module.exports = class MenuController {
         choices: [
           "Add new contact",
           "Get date",
+          "Remind me",
           "Exit"
         ]
       }
@@ -25,7 +26,10 @@ module.exports = class MenuController {
            break;
          case "Get date":
            this.getDate();
-            break;
+           break;
+         case "Remind me":
+          this.remindMe();
+          break;
          case "Exit":
            this.exit();
          default:
@@ -50,7 +54,11 @@ module.exports = class MenuController {
     var date = new Date();
     console.log('The date is: ' + date);
     this.main();
-
+  }
+  remindMe(){
+    this.clear();
+    console.log("Learning is a life-long pursuit");
+    this.main();
   }
   exit(){
     console.log("Thanks for using AddressBloc!");
