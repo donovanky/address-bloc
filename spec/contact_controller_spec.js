@@ -175,8 +175,6 @@ describe("ContactController", () => {
         });
       });
     });
-  });
-
   describe("#search()", () => {
     it("should return null when a contact was not found", (done) => {
       this.book.addContact(...zelda)
